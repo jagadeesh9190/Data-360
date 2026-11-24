@@ -1,0 +1,2450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ActivationPlatform xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <activationFlowType>DMO</activationFlowType>
+    <activationPlatformAdditionalMetadata>{
+  &quot;hashMethod&quot; : null,
+  &quot;customerFileSources&quot; : [ ],
+  &quot;activationPlatformEventMetadata&quot; : {
+    &quot;supportedEventTypes&quot; : [ &quot;Standard&quot;, &quot;Custom&quot; ],
+    &quot;showEventSourceAnnotations&quot; : false,
+    &quot;standardEventDetails&quot; : {
+      &quot;eventParameters&quot; : [ {
+        &quot;name&quot; : &quot;Event Type&quot;,
+        &quot;type&quot; : &quot;Event&quot;,
+        &quot;hierarchy&quot; : 1,
+        &quot;values&quot; : [ &quot;page_viewed&quot;, &quot;items_added&quot;, &quot;app_installed&quot;, &quot;order_created&quot;, &quot;checkout_started&quot;, &quot;appointment_scheduled&quot;, &quot;subscription_created&quot;, &quot;lead_created&quot;, &quot;registration_completed&quot;, &quot;app_opened&quot;, &quot;trial_started&quot;, &quot;contents_viewed&quot; ]
+      }, {
+        &quot;name&quot; : &quot;Action Source&quot;,
+        &quot;type&quot; : &quot;ActionSource&quot;,
+        &quot;hierarchy&quot; : 2,
+        &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+      } ],
+      &quot;eventParameterHierarchy&quot; : [ {
+        &quot;hierarchyCombination&quot; : &quot;Event__ActionSource&quot;,
+        &quot;hierarchyCombinationData&quot; : [ {
+          &quot;key&quot; : &quot;order_created&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;checkout_started&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;contents_viewed&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;items_added&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;page_viewed&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;lead_created&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;appointment_scheduled&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;registration_completed&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;app_installed&quot;,
+          &quot;values&quot; : [ &quot;mobile_app&quot; ]
+        }, {
+          &quot;key&quot; : &quot;app_opened&quot;,
+          &quot;values&quot; : [ &quot;mobile_app&quot; ]
+        }, {
+          &quot;key&quot; : &quot;subscription_created&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }, {
+          &quot;key&quot; : &quot;trial_started&quot;,
+          &quot;values&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        } ]
+      } ],
+      &quot;attributeMappingInfo&quot; : [ {
+        &quot;key&quot; : &quot;order_created&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;items_added&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;lead_created&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;app_installed&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;app_opened&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;trial_started&quot;,
+        &quot;eventParameter&quot; : null,
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;optional&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;source_url&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;amount&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;currency&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;opt_out&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;oppref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;country&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;city&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;zip_code&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;ip_address&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;user_agent&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;obref&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+            &quot;value&quot; : null
+          }, {
+            &quot;destinationName&quot; : &quot;plan_id&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;identifiers&quot; : [ {
+            &quot;destinationName&quot; : &quot;email_sha256&quot;,
+            &quot;value&quot; : null
+          } ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ ]
+      }, {
+        &quot;key&quot; : &quot;order_created__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;order_created__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;order_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;order_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;checkout_started__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;checkout_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;checkout_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;contents_viewed__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;contents_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;contents_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;items_added__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;items_added&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;items_added&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;page_viewed__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;page_viewed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;page_viewed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;lead_created__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;lead_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;lead_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;appointment_scheduled__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;appointment_scheduled&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;appointment_scheduled&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;registration_completed__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;registration_completed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;registration_completed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;app_installed__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;app_installed&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;app_installed&quot; ]
+      }, {
+        &quot;key&quot; : &quot;app_opened__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;app_opened&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;app_opened&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;subscription_created__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;subscription_created&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;subscription_created&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__web&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;web&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;web&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__mobile_app&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;mobile_app&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;mobile_app&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__offline&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;offline&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;offline&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__physical_store&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;physical_store&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;physical_store&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__phone_call&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;phone_call&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;phone_call&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__email&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;email&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;email&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      }, {
+        &quot;key&quot; : &quot;trial_started__other&quot;,
+        &quot;eventParameter&quot; : {
+          &quot;name&quot; : &quot;trial_started&quot;,
+          &quot;type&quot; : &quot;Event&quot;,
+          &quot;subEventParameter&quot; : {
+            &quot;name&quot; : &quot;other&quot;,
+            &quot;type&quot; : &quot;ActionSource&quot;,
+            &quot;subEventParameter&quot; : null
+          }
+        },
+        &quot;attributesOverride&quot; : {
+          &quot;required&quot; : [ {
+            &quot;destinationName&quot; : &quot;action_source&quot;,
+            &quot;value&quot; : &quot;other&quot;
+          } ],
+          &quot;optional&quot; : [ ],
+          &quot;identifiers&quot; : [ ],
+          &quot;exclude&quot; : [ ],
+          &quot;systemMappingAttributes&quot; : [ ]
+        },
+        &quot;referenceAttributes&quot; : [ &quot;trial_started&quot; ]
+      } ],
+      &quot;categoryHierarchyMap&quot; : {
+        &quot;Event__ActionSource&quot; : {
+          &quot;page_viewed&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;items_added&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;app_installed&quot; : [ &quot;mobile_app&quot; ],
+          &quot;order_created&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;checkout_started&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;appointment_scheduled&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;subscription_created&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;lead_created&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;registration_completed&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;app_opened&quot; : [ &quot;mobile_app&quot; ],
+          &quot;trial_started&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ],
+          &quot;contents_viewed&quot; : [ &quot;offline&quot;, &quot;other&quot;, &quot;web&quot;, &quot;mobile_app&quot;, &quot;phone_call&quot;, &quot;email&quot;, &quot;physical_store&quot; ]
+        }
+      }
+    },
+    &quot;customEventDetails&quot; : {
+      &quot;attributesOverride&quot; : {
+        &quot;required&quot; : [ {
+          &quot;destinationName&quot; : &quot;timestamp_ms&quot;,
+          &quot;value&quot; : null
+        } ],
+        &quot;optional&quot; : [ {
+          &quot;destinationName&quot; : &quot;action_source&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;source_url&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;amount&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;currency&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;opt_out&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;oppref&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;country&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;city&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;zip_code&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;ip_address&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;user_agent&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;obref&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;external_id_sha256&quot;,
+          &quot;value&quot; : null
+        }, {
+          &quot;destinationName&quot; : &quot;plan_id&quot;,
+          &quot;value&quot; : null
+        } ],
+        &quot;identifiers&quot; : [ {
+          &quot;destinationName&quot; : &quot;email_sha256&quot;,
+          &quot;value&quot; : null
+        } ],
+        &quot;exclude&quot; : [ ],
+        &quot;systemMappingAttributes&quot; : [ ]
+      },
+      &quot;attributeMappingInfo&quot; : [ ]
+    }
+  },
+  &quot;mappingSchemas&quot; : [ ],
+  &quot;customAttributePrefix&quot; : null,
+  &quot;partnerSupportedIds&quot; : [ ],
+  &quot;outputProperties&quot; : null,
+  &quot;activationPlatformAdditionalMetadataV2&quot; : null
+}</activationPlatformAdditionalMetadata>
+    <activationPlatformConnectorType>OAUTH</activationPlatformConnectorType>
+    <dataConnector>cdpactvstrgptnr__OpenAI_Conversions_API1793120736720</dataConnector>
+    <description>Activate customer engagement and CRM event data to OpenAI&apos;s Conversions API.</description>
+    <enabled>false</enabled>
+    <includeSegmentNames>false</includeSegmentNames>
+    <masterLabel>OpenAI Conversions API</masterLabel>
+    <outputFormat>JSON</outputFormat>
+    <outputGrouping>PER_ACCOUNT</outputGrouping>
+    <periodicRefreshFrequecy>REFRESH_30</periodicRefreshFrequecy>
+    <platformProcessingType>Streaming</platformProcessingType>
+    <platformType>Advertising</platformType>
+    <refreshFrequency xsi:nil="true"/>
+    <refreshMode>INCREMENTAL</refreshMode>
+</ActivationPlatform>
